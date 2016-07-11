@@ -18,8 +18,3 @@ export const TEAMS = [
   {name: 'Arsenal', league: LEAGUES.ENG, stars: 9},
   {name: 'Argentina', league: LEAGUES.INT, stars: 10},
 ]
-
-export const NATIONAL_FLAGS = new Map([
-    ['ESP', 🇪🇸],
-    ['ENG', 🇬🇧],
-  ])

@@ -9,7 +9,7 @@ export function randomize() {
 export function changeStarLevel(minimumStarLevel) {
   return {
     type: ATs.CHANGE_STAR_LEVEL,
-        payload: { options: {minimumStarLevel } }
+        payload: { minimumStarLevel }
   }
 }
 
