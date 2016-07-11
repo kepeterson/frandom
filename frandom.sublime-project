@@ -1,0 +1,28 @@
+{
+  "folders":
+  [
+    {
+      "folder_exclude_patterns":
+      [
+        "node_modules",
+        "build",
+      ],
+      "follow_symlinks": true,
+      "path": "src"
+    }
+  ],
+  "SublimeLinter":
+  {
+    "linters":
+    {
+      "eslint":
+      {
+        "chdir": "${project}/src"
+      },
+      "eslint_d":
+      {
+        "chdir": "${project}/src"
+      }
+    }
+  }
+}
