@@ -26,7 +26,7 @@ class ThreeTeams extends Component {
     return (
       <div className='teams'>
         {teams.map(t => {
-          return <div className='team' key={t.name}>{t.name}</div>
+          return <div className='team' key={t.name}>{t.name}<span style={{fontSize: '.5em'}}>{`(${t.league})`}</span></div>
         })}
       </div>
     )

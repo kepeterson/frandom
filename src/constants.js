@@ -7,6 +7,7 @@ export const LEAGUES = {
   POR: 'POR',
   RUS: 'RUS',
   TUR: 'TUR',
+  FRA: 'FRA'
 
 }
 
