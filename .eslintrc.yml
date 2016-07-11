@@ -1,0 +1,102 @@
+---
+extends:
+  - eslint:recommended
+  - plugin:import/errors
+
+parser: eslint-plugin-import/memo-parser
+# parser: babel-eslint
+
+parserOptions:
+  parser: babel-eslint
+  sourceType: module
+  ecmaVersion: 6
+
+env:
+  browser: true
+  node: true
+  es6: true
+
+globals:
+  PRODUCTION: false
+  DEBUG: false
+
+rules:
+  git/no-untracked: 2
+  # errors
+  no-debugger: 2
+  curly: [2, "multi-line"]
+  constructor-super: 2
+  no-fallthrough: 2
+  no-empty-pattern: 2
+  no-unexpected-multiline: 2  # protects us from no-semicolon errors
+
+  # react-y errors
+  react/jsx-uses-react: 2
+  react/jsx-no-undef: 2
+  react/jsx-uses-vars: 2
+  react/react-in-jsx-scope: 2
+  react/no-did-update-set-state: 2
+  react/no-did-mount-set-state: 2
+  react/jsx-no-duplicate-props: 2
+  react/no-unknown-property: 1
+  react/self-closing-comp: 1
+
+  # to be upgraded to errors:
+  react/jsx-key: 1
+  no-unused-expressions: 1
+  no-case-declarations: 1
+
+  # warnings
+  import/no-deprecated: 1
+  import/no-named-as-default: 1
+  no-unused-vars: [1, { varsIgnorePattern: "^log$" }]
+  no-console: 1
+  no-shadow: 1
+  no-mixed-spaces-and-tabs: 1
+  no-extra-boolean-cast: 1
+
+  # need discussion
+  # no-alert: 2
+  eqeqeq: [0, "allow-null"]
+  consistent-return: 0
+  consistent-this: [0, this]
+  complexity: [0, 10]
+
+  # style guide
+  import/no-require: 0
+  semi: [0, never]
+  camelcase: [0, properties: never]
+  space-before-blocks: 0
+  brace-style:
+    - 0
+    - 1tbs
+    - allowSingleLine: true
+  indent: [0, 2, { SwitchCase: 1 }]
+  space-before-keywords: 0
+  space-after-keywords: 0
+  quotes: 0
+  key-spacing: 0
+  max-len: [0, 120, 2] # allowed width, tab width
+  no-underscore-dangle: 0
+  no-use-before-define: 0 # this is a readability godsend
+  no-multi-spaces: 0
+  new-cap: 0
+  comma-spacing: 0
+  comma-dangle: 0
+  no-warning-comments:
+    - 0
+    - terms:
+      - "todo"
+      - "fixme"
+      - "hack"
+  react/prefer-es6-class: 0
+
+
+settings:
+  import/resolver: 'webpack'
+  import/ignore: ['node_modules', 'bower_components', 'src/js/', 'coffee$']
+
+plugins:
+  - react
+  - import
+  - git
