@@ -23964,7 +23964,12 @@
 	          return _react2.default.createElement(
 	            'div',
 	            { className: 'team', key: t.name },
-	            t.name
+	            t.name,
+	            _react2.default.createElement(
+	              'span',
+	              { style: { fontSize: '.5em' } },
+	              '(' + t.league + ')'
+	            )
 	          );
 	        })
 	      );
@@ -24031,7 +24036,8 @@
 	  INT: 'INT',
 	  POR: 'POR',
 	  RUS: 'RUS',
-	  TUR: 'TUR'
+	  TUR: 'TUR',
+	  FRA: 'FRA'
 	
 	};
 	
